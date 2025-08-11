@@ -1,1 +1,2 @@
-A project that 
+A school project
+
