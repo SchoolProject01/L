@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Storytelling</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="world">
+    <div class="grid-overlay"></div>
+
+    <!-- Slide 1 -->
+    <div class="slide" id="slide1">
+      <img id="backgrounds1" src="images/slide 1/backgrounds1-01.png" alt="Bakcgrounds1" class="character"/>
+      <img id="bed" src="images/slide 1/bed-01.png" alt="Bed" class="character" />
+      <img id="chair" src="images/slide 1/chair-01.png" alt="Chair" class="character" />
+      <img id="lamp-desk" src="images/slide 1/lamp and desk-01.png" alt="Lamp and Desk" class="character" />
+      <img id="table" src="images/slide 1/table-01.png" alt="Table" class="character" />
+      <img id="window" src="images/slide 1/window-01.png" alt="Window" class="character" />
+      <img id="script1" src="images/slide 1/script1.png" alt="Script1" class="character" />
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide" id="slide2" style="display: none;">
+      <img id="backgrounds2" src="images/slide 2/backgrounds2-01.png" alt="Backgrounds2" class="character" />
+      <img id="mirror" src="images/slide 2/mirror-01.png" alt="Mirror" class="character" />
+      <img id="shower" src="images/slide 2/shower-01.png" alt="Shower" class="character" />
+      <img id="sink" src="images/slide 2/sink-01.png" alt="Sink" class="character" />
+      <img id="toilet" src="images/slide 2/toilet-01.png" alt="Toilet" class="character" />
+       <img id="script2" src="images/slide 2/script2-01.png" alt="Script2" class="character"/>
+      
+    </div>   
+
+    <!-- Slide 3 -->
+    <div class="slide" id="slide3" style="display: none;">
+      <img id="background2" src="images/slide 3/background2-01.png" alt="Background2" class="character" />
+      <img id="big-closet" src="images/slide 3/big closet-01.png" alt="Big Closet" class="character" />
+      <img id="closet" src="images/slide 3/closet-01.png" alt="Closet" class="character" />
+      <img id="script3" src="images/slide 3/script3-01.png" alt="Script3" class="character"/>
+     </div>
+
+    <!-- Slide 4 -->
+    <div class="slide" id="slide4" style="display: none;">
+      <img id="door" src="images/slide 4/door-01.png" alt="Door" class="character" />
+      <img id="man-walking" src="images/slide 4/man walking-01.png" alt="Man Walking" class="character" />
+      <img id="script4" src="images/slide 4/script4-01.png" alt="Script4" class="character" />
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide" id="slide5" style="display: none;">
+      <img id="man" src="images/slide 5/man-01.png" alt="Man" class="character" />
+      <img id="background" src="images/slide 5/background.png" alt="Background" class="character"/>
+      <img id="script5" src="images/slide 5/script5-01.png" alt="Script5" class="character" />
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide" id="slide6" style="display: none;">
+      <img id="building" src="images/slide 6/building-01.png" alt="Building" class="character" />
+      <img id="man2" src="images/slide 6/man-01.png" alt="Man" class="character" />
+      <img id="sun" src="images/slide 6/sun-01.png" alt="Sun" class="character" />
+      <img id="script6" src="images/slide 6/script6-01.png" alt="Script6" class="character" />
+    </div>
+
+    <!-- Slide 7 -->
+    <div class="slide" id="slide7" style="display: none;">
+      <img id="man-laptop" src="images/slide 7/man sitting on chair typing on laptop-01.png" alt="Man on Laptop" class="character" />
+      <img id="table-plants" src="images/slide 7/table with plants and cup-01.png" alt="Table with Plants" class="character" />
+      <img id="script7" src="images/slide 7/script7.png" alt="Script7" class="character" />
+    </div> 
+
+    <!-- Slide 8 -->
+    <div class="slide" id="slide8" style="display: none;">
+      <img id="man-table" src="images/slide 8/man on table-01.png" alt="Man on Table" class="character" />
+      <img id="shelf-books" src="images/slide 8/shelf with books-01.png" alt="Bookshelf" class="character" />
+      <img id="window2" src="images/slide 8/window-01.png" alt="Window" class="character" />
+      <img id="script8" src="images/slide 8/script8-01.png" alt="Script8" class="character" />
+    </div>
+
+    <!-- Slide 9 -->
+    <div class="slide" id="slide9" style="display: none;">
+      <img id="boy" src="images/slide 9/boy-01.png" alt="Boy" class="character" />
+      <img id="greenboy" src="images/slide 9/greenboy-01.png" alt="Green Boy" class="character" />
+      <img id="script9" src="images/slide 9/script9.png" alt="Script9" class="character" />
+    </div>
+
+    <!-- Navigation -->
+    <div id="navigation">
+      <button id="prev">◀</button>
+      <span id="counter">1/9</span>
+      <div id="dots"></div>
+      <button id="next">▶</button>
+    </div>
+  </div>
+
+  <div class="slide active">
+    <img src="images/slide 1/bed-01.png" class="bed shrink" />
+    <img src="images/slide 1/chair-01.png" class="chair shrink" />
+    <img src="images/slide 1/lamp and desk-01.png" class="lamp shrink" />
+    <img src="images/slide 1/table-01.png" class="table shrink" />
+    <img src="images/slide 1/window-01.png" class="window shrink" />
+  </div>
+
+  <!-- Mute Button -->
+  <button id="mute-btn">🔊 Mute</button>
+
+  <audio id="bg-music" src="music/over-the-sea-peter-lainson-main-version-24827-02-17.mp3" loop></audio>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+

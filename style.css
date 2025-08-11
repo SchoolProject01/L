@@ -1,0 +1,284 @@
+body {
+  background-color: #c0f3ff;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#world {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+
+.character {
+  width: 15vw;
+  max-width: 300px;
+  min-width: 50px;
+  position: absolute;
+  cursor: pointer;
+}
+
+/* --- Positions for each slide --- */
+
+/* Slide 1 */
+#bed { top: 30vh; left: 0vw; width: 200%;}
+#chair { top: 30vh; left: 30vw; }
+#lamp-desk { top: 45vh; left: 0vw; }
+#table { top: 23vh; left: 34vw; }
+#window { top: 4vh; left: 40vw; }
+#script1 { top:5vh; left: 50vw; }
+#backgrounds1 {top: 0vh; left: 0vw;}
+
+/* Slide 2 */
+#mirror { top: 30vh; left: 60vw; }
+#shower { top: 20vh; left: 28vw; }
+#sink { top: 38vh; left: 55vw; }
+#toilet { top: 52vh; left: 53vw; }
+#script2 { top: 10vh; left:  40vw;}
+#backgrounds2 {top: 10vh; left: 20vw;}
+
+/* Slide 3 */
+#big-closet { top: 20Svh; left: 30vw; }
+#closet { top: 39vh; left: 49vw; }
+#background2 { top: 10vh; left: 30vw; }
+#script3 { top: 25vh; left: 5vw; }
+
+
+/* Slide 4 */
+#door { top: 25vh; left: 35vw; }
+#man-walking { top: 25vh; left: 50vw; }
+#script4 { top: 15vh; left: 15vw; }
+
+
+/* Slide 5 */
+#man { top: 40vh; left: 47vw; }
+#background{ top: 20vh; left: 30vw;}
+#script5 {top: 10vh; left: 45vw;}
+/* Slide 6 */
+#building { top: 20vh; left: 10vw; }
+#man2 { top:70vh; left: 10vw; }
+#sun { top: 0vh; left: 85vw; }
+#script6 { top: 10vh; left: 40vw; }
+/* Slide 7 */
+#man-laptop { top: 30vh; left: 30vw; }
+#table-plants { top: 40vh; left: 40vw; }
+#script7 {top: 10vh; left: 45vw;}
+
+/* Slide 8 */
+#man-table { top: 40vh; left: 25vw; }
+#shelf-books { top: 15vh; left: 10vw; }
+#window2 { top: 0vh; left: 75vw; }
+#script8 {top: 30vh; left: 40vw; }
+
+/* Slide 9 */
+#boy { top: 50vh; left: 30vw; }
+#greenboy { top: 50vh; left: 60vw; }
+#script9 {top: 15vh; left: 40vw;}
+
+/* --- Navigation and Buttons --- */
+#navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  z-index: 1002;
+  background-color: #c0f3ff;
+  padding: 10px;
+}
+
+#navigation button {
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 10px;
+  background: none;
+  cursor: pointer;
+}
+
+#counter {
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+#dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #333;
+  opacity: 0.5;
+}
+
+.dot.active {
+  opacity: 1;
+  border: 1px solid black;
+  background: black;
+}
+
+/* Mute Button */
+#mute-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1003;
+  padding: 8px 12px;
+  border: none;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* This shrinks only the ones with .shrink class */
+.shrink {
+  width: 120px !important;
+  height: auto;
+}
+
+#bed {
+  width: 4vw;         /* 👈 Adjust this value */
+  max-width: 550px;   /* 👈 Limit how big it can grow */
+  min-width: 400px;    /* 👈 Limit how small it can shrink */
+}
+#lamp-desk {
+  width: 4vw; 
+  max-width:200px;
+  min-width:190px ;}
+  #chair {
+  width: 4vw; 
+  max-width:150px;
+  min-width:140px ;}
+  #table {
+    width: 4vw; 
+    max-width:350px;
+    min-width:300px ;}
+    #window {
+      width: 4vw; 
+      max-width:250px;
+      min-width:200px ;}
+      #toilet{
+        width: 4vw; 
+        max-width:200px;
+        min-width:150px ;}
+        #shower {
+          width: 4vw; 
+          max-width:600px;
+          min-width:550px ;}
+          #sink {
+            width: 4vw; 
+            max-width: 600px;
+            min-width:550px ;}
+            #mirror {
+              width: 4vw; 
+              max-width: 400px;
+              min-width:390px ;}
+              #big-closet {
+                width: 4vw; 
+                max-width: 420px;
+                min-width:430px ;}
+                #building {
+                  width: 4vw; 
+                  max-width: 1700px;
+                  min-width:1690px ;}
+                  #man2{
+                    width: 4vw; 
+                    max-width:200px;
+                    min-width:150px ;}
+                    #man-table {
+                      width: 4vw; 
+                      max-width: 1000px;
+                      min-width:990px ;}
+                      #window2 {
+                        width: 4vw; 
+                        max-width: 700px;
+                        min-width:690px ;}
+                        #shelf-books {
+                          width: 4vw; 
+                          max-width: 400px;
+                          min-width:390px ;}
+                          #background {
+                            width: 4vw; 
+                            max-width: 900px;
+                            min-width:890px ;}
+                            #background2 {
+                              width: 4vw; 
+                              max-width: 1000px;
+                              min-width:990px ;}
+                              #man-walking {
+                                width: 4vw; 
+                                max-width: 500px;
+                                min-width:445px ;}
+                                #door {
+                                  width: 4vw; 
+                                  max-width: 500px;
+                                  min-width:450px ;}
+                                  #man-laptop {
+                                    width: 4vw; 
+                                    max-width: 700px;
+                                    min-width:650px ;}
+                                    #table-plants {
+                                      width: 4vw; 
+                                      max-width: 500px;
+                                      min-width:450px ;}
+                                      #script1 {
+                                        width: 4vw; 
+                                        max-width: 900px;
+                                        min-width:890px ;
+                                      }
+                                        #script2 {
+                                          width: 4vw; 
+                                          max-width: 500px;
+                                          min-width:450px ;
+                                        }
+                                      
+                                      #script9 {
+                                        width: 4vw; 
+                                        max-width: 500px;
+                                        min-width:450px ;
+                                      }
+                                      #script5 {
+                                        width: 4vw; 
+                                        max-width: 500px;
+                                        min-width:450px ;
+                                      }
+                                      #script3 {
+                                        width: 4vw; 
+                                        max-width: 500px;
+                                        min-width:450px ;
+                                      }
+                                    
+                                    #backgrounds2 {
+                                      width: 4vw; 
+                                      max-width: 1500px;
+                                      min-width:1450px ;
+                                      min-height: 999px;
+                                      max-height: 1000px;
+                                    }
+                                    #backgrounds1 {
+                                      width: 4vw; 
+                                      max-width: 1000px;
+                                      min-width:950px ;
+                                      height: 500px;
+                                    }
+                                    #script6 {
+                                      width: 4vw; 
+                                      max-width: 700px;
+                                      min-width:650px ;
+                                      
+                                    }
+
+
+
+      
+    
+  
